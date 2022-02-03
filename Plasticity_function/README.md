@@ -4,7 +4,7 @@ The following function will calculate principal component distances between samp
 
 <br/>
 
-### **Function usage:**
+## **Function usage:**
 
 ```
 plast_out <- PCAplast(pca = XX, # the PCA dataframe containing the PCA eigenvalues
@@ -19,7 +19,7 @@ plast_out <- PCAplast(pca = XX, # the PCA dataframe containing the PCA eigenvalu
 <br/>
 
 
-### **Arguments:**
+## **Arguments:**
 
 argument | explanation
 --- | --- 
@@ -33,7 +33,7 @@ control_col | Column used for the 'treatment' (this can be a grouping by treatme
 
 <br/>
 
-### **Example:**
+## **Example:**
 
 An example use of this function can be found on the [PlasticityFun_example.R](https://github.com/seabove7/furry-lamp/blob/main/Plasticity_function/PlasticityFun_example.R) script in this repository using the Iris dataset. 
 
@@ -42,6 +42,9 @@ An example use of this function can be found on the [PlasticityFun_example.R](ht
 </p> 
 
 <br/>
+
+### Please cite this function as:
+Bove, C. (2022). RandomFun: Plasticity from PC distances (Version 1.0) [Computer software]. DOI
 
 ---
 **Please reach out with questions about the function or if you encounter any bugs!**  
