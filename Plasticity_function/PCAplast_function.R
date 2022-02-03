@@ -167,3 +167,28 @@ PCAplast <- function(pca, data, sample_ID = NA, num_pca = "all", control_col, co
 
 }
 
+
+#################################################################
+###### Session information from last update
+
+# R version 3.6.3 (2020-02-29)
+# Platform: x86_64-apple-darwin15.6.0 (64-bit)
+# Running under: macOS Catalina 10.15.7
+# 
+# Matrix products: default
+# BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+# LAPACK: /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRlapack.dylib
+# 
+# locale:
+#   [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+# 
+# attached base packages:
+#   [1] stats     graphics  grDevices utils     datasets  methods   base     
+# 
+# loaded via a namespace (and not attached):
+#   [1] fansi_0.5.0      assertthat_0.2.1 utf8_1.2.2       crayon_1.4.1     dplyr_1.0.7      R6_2.5.1         DBI_1.1.1       
+# [8] lifecycle_1.0.0  magrittr_2.0.1   pillar_1.6.2     rlang_0.4.11     vctrs_0.3.8      generics_0.1.0   ellipsis_0.3.2  
+# [15] tools_3.6.3      glue_1.4.2       purrr_0.3.4      tinytex_0.33     xfun_0.25        compiler_3.6.3   pkgconfig_2.0.3 
+# [22] tidyselect_1.1.1 tibble_3.1.3   
+
+
