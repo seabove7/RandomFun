@@ -2,6 +2,8 @@
 
 <br/>
 
+[![DOI](https://zenodo.org/badge/455186912.svg)](https://zenodo.org/badge/latestdoi/455186912)
+
 ---
 
 ## [Plasticity function](https://github.com/seabove7/RandomFun/tree/main/Plasticity_function)
