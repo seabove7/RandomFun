@@ -4,6 +4,10 @@ The following function will calculate principal component distances between samp
 
 <br/>
 
+
+### Please cite this function as:
+Bove, C. (2022). RandomFun: Plasticity from PC distances (Version 1.0) [Computer software]. DOI
+
 ## **Function usage:**
 
 ```
@@ -42,9 +46,6 @@ An example use of this function can be found on the [PlasticityFun_example.R](ht
 </p> 
 
 <br/>
-
-### Please cite this function as:
-Bove, C. (2022). RandomFun: Plasticity from PC distances (Version 1.0) [Computer software]. DOI
 
 ---
 **Please reach out with questions about the function or if you encounter any bugs!**  
