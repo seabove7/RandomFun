@@ -95,7 +95,7 @@ PCAplast <- function(pca, data, sample_ID = NA, num_pca = "all", control_col, co
       summarise_if(is.numeric, mean)
     
     # add the control PCA values to all samples 
-    dist_df2 <- merge(dist_df, mean_control)
+    dist_df2 <- merge(dist_df, mean_control[-1])
     
   }
   
