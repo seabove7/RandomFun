@@ -95,7 +95,7 @@ PCAplast <- function(pca, data, sample_ID = NA, num_pca = "all", control_col, co
       summarise_if(is.numeric, mean)
     
     # add the control PCA values to all samples 
-    dist_df2 <- merge(dist_df, mean_control[-1])
+    dist_df2 <- merge(dist_df, mean_control, by.x = control_col, by.y = tolower(control_col), all.x = TRUE)
     
   }
   
@@ -106,7 +106,7 @@ PCAplast <- function(pca, data, sample_ID = NA, num_pca = "all", control_col, co
     dist_df2 <- dist_df2[order(dist_df2[[sample_ID]]),]
   } else {
     rownames(dist_df2) <- rownames(data_df)
-    dist_df2 <- dist_df2[order(row.names(dist_df2)),]
+    dist_df2 <- dist_df2[order(rownames(dist_df2)),]
   }
   
   
