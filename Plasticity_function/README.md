@@ -1,12 +1,14 @@
 # PCAplast function
 
-The following function will calculate principal component distances between samples as a measure of plasticity. This measure was adapted from [Barott et al., 2021](https://www.pnas.org/content/118/22/e2025435118) and was initially developed to calculate physiological plasticity of corals under ocean acidification and warming stressors in a mesocosm experiment ([Bove et al. In Prep](https://www.biorxiv.org/content/10.1101/2021.07.13.452173v1)).
+The following function will calculate principal component distances between samples as a measure of plasticity. This measure was adapted from [Barott et al., 2021](https://www.pnas.org/content/118/22/e2025435118) and was initially developed to calculate physiological plasticity of corals under ocean acidification and warming stressors in a mesocosm experiment ([Bove et al. 2022](https://doi.org/10.1371/journal.pone.0273897)).
 
 <br/>
 
 
-### Please cite this function as:
-Bove, C. (2022). RandomFun: Plasticity from PC distances (Version 1.0) [Computer software]. DOI
+### Please cite this function and the original manuscript as:
+Bove, C. (2022). RandomFun: Plasticity from PC distances (Version 1.0) [Computer software]. https://doi.org/10.5281/zenodo.5961964
+
+Bove CB, Davies SW, Ries JB, Umbanhowar J, Thomasson BC, Farquhar EB, et al. (2022) Global change differentially modulates Caribbean coral physiology. PLoS ONE 17(9): e0273897. https://doi.org/10.1371/journal.pone.0273897
 
 ## **Function usage:**
 
