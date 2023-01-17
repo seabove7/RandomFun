@@ -80,7 +80,10 @@ PCAplast <- function(pca, data, sample_ID = NA, num_pca = "all", control_col, co
     mean_control <- dist_df %>%
       filter(dist_df[[control_name]] == list(control_lvl)[[1]]) %>% 
       rename_with(tolower) %>% # renames all pc's with lowercase 'PC' (just to differentiate from all sample PCs)
-      dplyr::select(colnames((dist_df %>% rename_with(tolower))[tolower(group_col)]), starts_with("pc"))
+      dplyr::select(colnames((dist_df %>% rename_with(tolower))[tolower(group_col)]), starts_with("pc")) %>%
+      group_by_at(vars(tolower(group_col))) %>% 
+      summarise_if(is.numeric, mean)
+    
     
     # add the control PCA values to treatment samples per grouping
     dist_df2 <- left_join(dist_df, mean_control, by.x = group_col, by.y = tolower(group_col))
