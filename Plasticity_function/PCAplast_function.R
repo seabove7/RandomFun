@@ -86,7 +86,7 @@ PCAplast <- function(pca, data, sample_ID = NA, num_pca = "all", control_col, co
     
     
     # add the control PCA values to treatment samples per grouping
-    dist_df2 <- left_join(dist_df, mean_control, by.x = group_col, by.y = tolower(group_col))
+    dist_df2 <- merge(dist_df, mean_control, by.x = group_col, by.y = tolower(group_col))
     
   } else { # calculate mean per control treatment
     mean_control <- dist_df %>%
