@@ -90,7 +90,7 @@ PCAplast <- function(pca, data, sample_ID = NA, num_pca = "all", control_col, co
     
   } else { # calculate mean per control treatment
     mean_control <- dist_df %>%
-      #filter(dist_df[[control_name]] == list(control_lvl)[[1]]) %>% 
+      filter(dist_df[[control_name]] == list(control_lvl)[[1]]) %>% 
       rename_with(tolower) %>% # renames all pc's with lowercase 'PC' (just to differentiate from all sample PCs)
       dplyr::select(colnames((dist_df %>% rename_with(tolower))[tolower(control_name)]), starts_with("pc")) %>% # select just the PCs 
       #group_by() 
@@ -98,7 +98,8 @@ PCAplast <- function(pca, data, sample_ID = NA, num_pca = "all", control_col, co
       summarise_if(is.numeric, mean)
     
     # add the control PCA values to all samples 
-    dist_df2 <- merge(dist_df, mean_control, by.x = control_col, by.y = tolower(control_col), all.x = TRUE)
+    #dist_df2 <- merge(dist_df, mean_control, by.x = control_col, by.y = tolower(control_col), all.x = TRUE)
+    dist_df2 <- merge(dist_df, mean_control, all = TRUE)
     
   }
   
