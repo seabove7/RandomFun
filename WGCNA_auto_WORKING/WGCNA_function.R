@@ -1,7 +1,7 @@
 ################################################################################
 ################### WGCNA functions to automate assessments ####################
 ############## Written by Colleen B. Bove (colleenbove@gmail.com) ##############
-########################## Laste update: 03 Feb 2022 ###########################
+######################## Laste update: 21 October 2024 #########################
 ################################################################################
 
 
@@ -21,7 +21,6 @@
 ### Select the significant trait/module pairings from the WGCNA heatmap 
 # traitMods <- sigMods(matrix = moduleTraitPvalue) ## **NOTE: default alpha is set you 0.05 but can be adjusted by specifying 'alpha = XX' here
 
-
 #### Running the below function will create the following: 
 ## - Data frame of Gene Trait Significance ("GTSig") and Gene Significance P values ("GSPvalue") for each trail/module
 ## - List containing all the ggplot objects for each module/trait correlation plot ("CorrPlots")
@@ -38,7 +37,6 @@
 #                          corrplotpath = "XXX", # path where to save correlation plots
 #                          heatplotpath = "XXX", # path where to save heat map plots
 #                          goMWUpath = "XXX") # path to save GO_MWU output files
-
 
 
 ### It is recommended that you save the WGCNA Trait/module output list populated in function for use later
@@ -121,7 +119,7 @@ ModWGCNA <- function(wgcna_data, traitMods, traits, geneModuleMembership, MEs, v
       geom_point(aes_string(x = x, y = y), shape = 1, colour = module, size = 2) +
       xlab(paste(module, "module membership")) +
       ylab(paste("GS for", traitMods$whichTrait[r])) +
-      stat_cor(aes_string(x = abs(geneModuleMembership[moduleGenes, column]), y = abs(GTSvalue_df[moduleGenes, selectTrait])), method = "pearson") +
+      stat_cor(aes_string(x = abs(geneModuleMembership[moduleGenes, column]), y = abs(GTSvalue_df[moduleGenes, selectTrait])), method = "pearson")
       ggsave(paste(corrplotpath, combo, ".png", sep = ""), width = 5, height = 4.3)
     
     plots[[combo]] <- plot
@@ -172,7 +170,7 @@ ModWGCNA <- function(wgcna_data, traitMods, traits, geneModuleMembership, MEs, v
       labs(x = "", y = "eigengene expression")
     
     ## Combine and save heatmap and bar plot
-    heatbar <- cowplot::plot_grid(heatmap, barplot, nrow = 2, rel_heights = c(1, 1)) +
+    heatbar <- cowplot::plot_grid(heatmap, barplot, nrow = 2, rel_heights = c(1, 1))
       ggsave(paste(heatplotpath, combo2, ".png", sep = ""), width = 8, height = 6)
     
     plots2[[combo2]] <- heatbar
